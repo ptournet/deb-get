@@ -855,7 +855,7 @@ function print_etc_overrides() {
         done
 
         if [ "${#LOCAL_APPS[@]}" -gt 0 ]; then
-            fancy_message recommend "Please consider contributing back new entries, an issue (or raise a PR) directly at https://github.com/wimpysworld/deb-get/pulls"
+            fancy_message recommend "Please consider contributing back new entries, an issue (or raise a PR) directly at https://github.com/ptournet/deb-get/pulls"
         fi
     fi
 }
@@ -1369,7 +1369,7 @@ function deb_deb-get() {
         VERSION_PUBLISHED="$(echo "${URL}" | cut -d'_' -f2)"
     fi
     PRETTY_NAME="deb-get"
-    WEBSITE="https://github.com/wimpysworld/deb-get"
+    WEBSITE="https://github.com/ptournet/deb-get"
     SUMMARY="'apt-get' functionality for .debs published in 3rd party repositories or via direct download package."
 }
 
@@ -1675,7 +1675,7 @@ fi
 
 export CACHE_DIR="/var/cache/deb-get"
 readonly ETC_DIR="/etc/deb-get"
-readonly MAIN_REPO_URL="https://raw.githubusercontent.com/wimpysworld/deb-get/main/01-main"
+readonly MAIN_REPO_URL="https://raw.githubusercontent.com/ptournet/deb-get/tweaks/01-main"
 readonly DISTRO_INFO_DIR="/usr/share/distro-info"
 
 # shellcheck disable=SC2034
