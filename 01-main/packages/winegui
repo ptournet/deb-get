@@ -1,5 +1,5 @@
 DEFVER=1
-CODENAMES_SUPPORTED="bookworm trixie forky sid noble plucky questing"
+CODENAMES_SUPPORTED="bookworm trixie forky sid noble plucky questing resolute"
 get_github_releases "winegui/WineGUI" "latest"
 
 local TARGET_CODENAME="${UPSTREAM_CODENAME}"
@@ -12,6 +12,9 @@ if [ "${ACTION}" != prettylist ]; then
     if [ -z "${URL}" ]; then
 
         case "${UPSTREAM_CODENAME}" in
+            resolute)
+                TARGET_CODENAME="plucky"
+                ;;
             questing)
                 TARGET_CODENAME="plucky"
                 ;;
